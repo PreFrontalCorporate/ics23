@@ -46,7 +46,7 @@ jobs:
       # Run the VALIDATE_POLICY check. More configuration details here - https://github.com/aws-actions/cloudformation-aws-iam-policy-validator
       - name: Run AWS AccessAnalyzer ValidatePolicy check
         id: run-aws-validate-policy
-        uses: aws-actions/cloudformation-aws-iam-policy-validator@8cadb086bd7cce9ffd5a0bb8051b36f778b556bd #v1.0.2
+        uses: aws-actions/cloudformation-aws-iam-policy-validator@1ab6d04f04019c44633959fa081ad7ef95297f7c #v1.0.3
         with:
           policy-check-type: "VALIDATE_POLICY"
           template-path: ${{ env.TEMPLATE_PATH}}
@@ -58,7 +58,7 @@ jobs:
       # Run the CHECK_ACCESS_NOT_GRANTED check. More configuration details here - https://github.com/aws-actions/cloudformation-aws-iam-policy-validator
       - name: Run AWS AccessAnalyzer CheckAccessNotGranted check
         id: run-aws-check-access-not-granted
-        uses: aws-actions/cloudformation-aws-iam-policy-validator@8cadb086bd7cce9ffd5a0bb8051b36f778b556bd #v1.0.2
+        uses: aws-actions/cloudformation-aws-iam-policy-validator@1ab6d04f04019c44633959fa081ad7ef95297f7c #v1.0.3
         with:
           policy-check-type: "CHECK_ACCESS_NOT_GRANTED"
           template-path: ${{ env.TEMPLATE_PATH}}
@@ -73,7 +73,7 @@ jobs:
       # reference-policy is stored in GitHub secrets
       - name: Run AWS AccessAnalyzer CheckNoNewAccess check
         id: run-aws-check-no-new-access
-        uses: aws-actions/cloudformation-aws-iam-policy-validator@8cadb086bd7cce9ffd5a0bb8051b36f778b556bd #v1.0.2
+        uses: aws-actions/cloudformation-aws-iam-policy-validator@1ab6d04f04019c44633959fa081ad7ef95297f7c #v1.0.3
         with:
           policy-check-type: "CHECK_NO_NEW_ACCESS"
           template-path: ${{ env.TEMPLATE_PATH}}
@@ -87,7 +87,7 @@ jobs:
       # Run the CHECK_NO_PUBLIC_ACCESS check. More configuration details here - https://github.com/aws-actions/cloudformation-aws-iam-policy-validator
       - name: Run AWS AccessAnalyzer CheckNoPublicAccess check
         id: run-aws-check-no-public-access
-        uses: aws-actions/cloudformation-aws-iam-policy-validator@8cadb086bd7cce9ffd5a0bb8051b36f778b556bd #v1.0.2
+        uses: aws-actions/cloudformation-aws-iam-policy-validator@1ab6d04f04019c44633959fa081ad7ef95297f7c #v1.0.3
         with:
           policy-check-type: "CHECK_NO_PUBLIC_ACCESS"
           template-path: ${{ env.TEMPLATE_PATH }}
